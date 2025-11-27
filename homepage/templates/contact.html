@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% block title %} Contact – Sanatan Seva Sangh {% endblock title %}
+
+{% block css %}
+<script>
+    /* CONTACT SECTION STYLES */
+.contact-section {
+    background-color: #fdf7f0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.contact-section .section-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #d35400;
+    margin-bottom: 40px;
+    position: relative;
+}
+.contact-section .section-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #f39c12;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.contact-section .bg-white {
+    background: #fff;
+}
+
+.contact-section .shadow-sm {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-section .form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+.contact-section .form-control:focus {
+    border-color: #d35400;
+    box-shadow: 0 0 5px rgba(211,84,0,0.4);
+}
+
+.contact-section .btn {
+    background-color: #d35400;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 30px;
+    transition: 0.3s;
+}
+.contact-section .btn:hover {
+    background-color: #f39c12;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.contact-section i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.contact-section p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+@media(max-width: 768px) {
+    .contact-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .contact-section .section-title {
+        font-size: 1.6rem;
+    }
+}
+
+</script>
+{% endblock css %}
+
+{% block content  %}
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section mt-5 py-5 bg-light">
+    <div class="container">
+
+        <!-- Section Title -->
+        <div class="text-center mb-5">
+            <h2 class="section-title fw-bold">Contact Us</h2>
+            <p class="text-muted">We are here to serve, guide, and support all devotees.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- CONTACT DETAILS -->
+            <div class="col-lg-5">
+                <div class="bg-white p-4 rounded shadow-sm">
+                    <h4 class="fw-bold mb-3">Sanatan Seva Sangh</h4>
+
+                    <p><i class="bi bi-geo-alt-fill text-danger"></i>
+                        Shri Sanatan Seva Dham Ashram,<br>
+                        Parikrama Marg, Vrindavan,<br>
+                        Mathura, Uttar Pradesh – 281121
+                    </p>
+
+                    <p><i class="bi bi-telephone-fill text-success"></i>
+                        <strong>Phone:</strong> +91 9876543210</p>
+
+                    <p><i class="bi bi-headset text-primary"></i>
+                        <strong>Seva Helpline:</strong> +91 9000000000</p>
+
+                    <p><i class="bi bi-envelope-fill text-warning"></i>
+                        info@sanatansevasangh.org</p>
+
+                    <p><i class="bi bi-envelope-open-fill text-info"></i>
+                        seva@sanatansevasangh.org</p>
+
+                    <p><i class="bi bi-clock-fill text-secondary"></i>
+                        Monday–Sunday: 6:00 AM – 9:00 PM</p>
+                </div>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="col-lg-7">
+                <div class="bg-white p-4 rounded shadow-sm">
+                    <h4 class="fw-bold mb-3">Send Us a Message</h4>
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+
+                        <div class="mb-3">
+                            <textarea rows="5" class="form-control" placeholder="Write your message here..."
+                                      required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger px-4 py-2">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
+
+{% block js %}
+{% endblock js %}

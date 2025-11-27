@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% block title %} Gallery – Sanatan Seva Sangh {% endblock title %}
+
+{% block css %}
+    <style>
+        .gallery-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .filter-btn {
+            border-radius: 20px;
+            padding: 6px 20px;
+        }
+
+        .hero-gallery {
+            background: url('https://images.unsplash.com/photo-1504198453319-5ce911bafcde') center/cover no-repeat;
+            height: 40vh;
+            position: relative;
+        }
+        .hero-overlay {
+            background: rgba(0,0,0,0.6);
+            position: absolute;
+            width: 100%; height: 100%;
+        }
+        .hero-content {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding-top: 12%;
+        }
+    </style>
+{% endblock css %}
+
+{% block content  %}
+<!-- HERO -->
+<section class="hero-gallery mb-5">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="display-5 fw-bold">Photo Gallery</h1>
+        <p class="lead">Memories of Bhakti, Seva & Dharma</p>
+    </div>
+</section>
+
+<div class="container">
+
+    <!-- FILTER BUTTONS -->
+    <div class="text-center mb-4">
+        <button class="btn btn-outline-warning filter-btn" onclick="filterGallery('all')">All</button>
+        <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('temple')">Temple Visits</button>
+        <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('seva')">Seva Activities</button>
+        <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('annadan')">Annadan</button>
+        <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('gau')">Gau Seva</button>
+        <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('events')">Events & Festivals</button>
+        <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('volunteers')">Volunteers</button>
+        <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('ashram')">Ashram Life</button>
+    </div>
+
+    <!-- GALLERY GRID -->
+    <div class="row g-4">
+
+        <!-- Temple Visits -->
+        <div class="col-md-4 gallery-item temple">
+            <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa" class="gallery-img" alt="">
+        </div>
+        <div class="col-md-4 gallery-item temple">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" class="gallery-img" alt="">
+        </div>
+
+        <!-- Seva Activities -->
+        <div class="col-md-4 gallery-item seva">
+            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da" class="gallery-img" alt="">
+        </div>
+
+        <!-- Annadan -->
+        <div class="col-md-4 gallery-item annadan">
+            <img src="https://images.unsplash.com/photo-1557683304-673a23048d34" class="gallery-img" alt="">
+        </div>
+
+        <!-- Gau Seva -->
+        <div class="col-md-4 gallery-item gau">
+            <img src="https://images.unsplash.com/photo-1603386329225-868f9d7f6a65" class="gallery-img" alt="">
+        </div>
+
+        <!-- Events & Festivals -->
+        <div class="col-md-4 gallery-item events">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="gallery-img" alt="">
+        </div>
+
+        <!-- Volunteers -->
+        <div class="col-md-4 gallery-item volunteers">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2" class="gallery-img" alt="">
+        </div>
+
+        <!-- Ashram Life -->
+        <div class="col-md-4 gallery-item ashram">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91" class="gallery-img" alt="">
+        </div>
+
+    </div>
+
+</div>
+{% endblock content %}
+
+{% block js %}
+<script>
+    function filterGallery(category) {
+        let items = document.getElementsByClassName('gallery-item');
+
+        for (let i = 0; i < items.length; i++) {
+            items[i].style.display = "none";
+
+            if (category === "all" || items[i].classList.contains(category)) {
+                items[i].style.display = "block";
+            }
+        }
+    }
+</script>
+{% endblock js %}

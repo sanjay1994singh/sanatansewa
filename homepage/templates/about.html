@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block title %} About Us – Sanatan Seva Sangh {% endblock title %}
+
+{% block css %}
+<style>
+        .section-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .mission-box, .vision-box, .founder-box {
+            border-left: 4px solid #f7b731;
+            background: #fffdf4;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .hero-about {
+            background: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da') center/cover no-repeat;
+            height: 50vh;
+            position: relative;
+        }
+        .hero-overlay {
+            background: rgba(0,0,0,0.6);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        .hero-content {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding-top: 12%;
+        }
+    </style>
+{% endblock css %}
+
+{% block content  %}
+<!-- HERO/BANNER -->
+<section class="hero-about">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="display-5 fw-bold">About Sanatan Seva Sangh</h1>
+        <p class="lead">Serving Humanity with Dharma, Seva & Sanskar</p>
+    </div>
+</section>
+
+<!-- ABOUT DESCRIPTION -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Who We Are</h2>
+        <p class="text-center px-md-5">
+            Sanatan Seva Sangh is a non-profit spiritual organization dedicated to promoting
+            the eternal values of <strong>Sanatan Hindu Dharma</strong>.
+            We work to preserve Indian culture, uplift society through seva, and spread the teachings
+            of the Vedas, Puranas, and Hindu philosophy.
+        </p>
+    </div>
+</section>
+
+<!-- MISSION SECTION -->
+<section class="py-4 bg-light">
+    <div class="container">
+
+        <h2 class="section-title text-center">Our Mission</h2>
+
+        <div class="mission-box">
+            <ul style="line-height: 1.9; font-size: 1.1rem;">
+                <li><strong>संरक्षण –</strong> Sanatan Dharma का संरक्षण व प्रसार</li>
+                <li><strong>सेवा –</strong> गौ सेवा, अन्नदान, मानव सेवा</li>
+                <li><strong>संस्कार –</strong> बाल संस्कार एवं नारी शक्ति कार्यक्रम</li>
+                <li><strong>संस्कृति –</strong> भारतीय संस्कृति का पुनर्जागरण</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- VISION -->
+<section class="py-5">
+    <div class="container">
+
+        <h2 class="section-title text-center">Our Vision</h2>
+
+        <div class="vision-box text-center mx-auto" style="max-width: 700px;">
+            <p class="fs-5"><em>“Vasudhaiva Kutumbakam – The whole world is one family.”</em></p>
+            <p>We envision a society guided by dharma, compassion, and unity.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOUNDER MESSAGE -->
+<section class="py-5 bg-dark text-light">
+    <div class="container">
+        <h2 class="section-title text-center text-white">Founder’s Message</h2>
+
+        <div class="founder-box mx-auto text-center text-dark" style="max-width: 800px; background: #fff;">
+            <p class="fs-5">
+                "Sanatan Dharma is not just a religion, it is a way of life.
+                Our purpose is to serve humanity with purity, devotion, and love."
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock content %}
+
+
+
+

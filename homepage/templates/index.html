@@ -1,63 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanatan Seva Sangh</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+{% extends 'base.html' %}
+{% block title %} Sanatan Seva Sangh {% endblock title %}
 
-    <style>
-        .hero {
-            background: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da') center/cover no-repeat;
-            height: 90vh;
-            position: relative;
-        }
-        .hero-overlay {
-            background: rgba(0,0,0,0.6);
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            padding-top: 20%;
-        }
-        .section-title {
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-    </style>
-</head>
+{% block css %}
+<style>
+    .hero {
+        background: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da') center/cover no-repeat;
+        height: 90vh;
+        position: relative;
+    }
+    .hero-overlay {
+        background: rgba(0,0,0,0.6);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        padding-top: 20%;
+    }
+    .section-title {
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+</style>
+{% endblock css %}
 
-<body>
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Sanatan Seva Sangh</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#seva">Seva</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        <li class="nav-item">
-            <a class="btn btn-warning ms-2" href="#donate">Donate</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+{% block content  %}
 <!-- HERO SECTION -->
 <section class="hero">
     <div class="hero-overlay"></div>
@@ -125,10 +97,14 @@
     <div class="container">
         <h2 class="section-title">Gallery</h2>
         <div class="row g-3">
-            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da" class="img-fluid rounded"></div>
-            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1582653154701-4cc88a0505ac" class="img-fluid rounded"></div>
-            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1559070121-1d1584e8d87d" class="img-fluid rounded"></div>
-            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1603386329225-868f9d7f6a65" class="img-fluid rounded"></div>
+            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da"
+                                       class="img-fluid rounded"></div>
+            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1582653154701-4cc88a0505ac"
+                                       class="img-fluid rounded"></div>
+            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1559070121-1d1584e8d87d"
+                                       class="img-fluid rounded"></div>
+            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1603386329225-868f9d7f6a65"
+                                       class="img-fluid rounded"></div>
         </div>
     </div>
 </section>
@@ -161,11 +137,4 @@
         </div>
     </div>
 </section>
-
-<footer class="text-center py-3 bg-secondary text-white">
-    © 2025 Sanatan Seva Sangh. All Rights Reserved.
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+{% endblock content %}

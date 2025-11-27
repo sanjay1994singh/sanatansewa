@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% block title %} Seva Activities – Sanatan Seva Sangh {% endblock title %}
+
+{% block css %}
+    <style>
+        .section-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero-seva {
+            background: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da') center/cover no-repeat;
+            height: 45vh;
+            position: relative;
+        }
+        .hero-overlay {
+            background: rgba(0,0,0,0.6);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+        .hero-content {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding-top: 10%;
+        }
+
+        .seva-card {
+            transition: 0.3s;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .seva-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+        }
+        .seva-img {
+            height: 220px;
+            object-fit: cover;
+        }
+    </style>
+{% endblock css %}
+
+{% block content  %}
+<!-- HERO SECTION -->
+<section class="hero-seva mb-5">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="display-5 fw-bold">Our Seva Activities</h1>
+        <p class="lead">Dedicated to Dharma, Humanity & Service</p>
+    </div>
+</section>
+
+<div class="container">
+
+    <h2 class="section-title text-center mb-5">Seva for Society & Sanatan Dharma</h2>
+
+    <div class="row g-4">
+
+        <!-- GAU SEVA -->
+        <div class="col-md-4">
+            <div class="card seva-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1603386329225-868f9d7f6a65" class="seva-img w-100" alt="Gau Seva">
+                <div class="card-body">
+                    <h4 class="card-title">Gau Seva</h4>
+                    <p>
+                        We provide daily fodder, medical care, and shelter for cows.
+                        Volunteers actively help with cleaning, feeding, and maintaining the Gaushala.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ANNADAN -->
+        <div class="col-md-4">
+            <div class="card seva-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1557683304-673a23048d34" class="seva-img w-100" alt="Annadan">
+                <div class="card-body">
+                    <h4 class="card-title">Annadan</h4>
+                    <p>
+                        Daily & weekly food distribution for the poor, pilgrims, and sadhus.
+                        Special Annadan on Ekadashi, Amavasya & major festivals.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- VRIKSHAROPAN -->
+        <div class="col-md-4">
+            <div class="card seva-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="seva-img w-100" alt="Tree Plantation">
+                <div class="card-body">
+                    <h4 class="card-title">Vriksharopan</h4>
+                    <p>
+                        Large-scale tree plantation drives promoting environmental balance.
+                        More than <strong>10,000+ trees</strong> planted so far.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- NARI SHAKTI -->
+        <div class="col-md-4">
+            <div class="card seva-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2" class="seva-img w-100" alt="Women Empowerment">
+                <div class="card-body">
+                    <h4 class="card-title">Nari Shakti</h4>
+                    <p>
+                        Empowering women through safety workshops, skills training & awareness programs
+                        to build confidence and independence.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BAL SANSKAR -->
+        <div class="col-md-4">
+            <div class="card seva-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" class="seva-img w-100" alt="Bal Sanskar">
+                <div class="card-body">
+                    <h4 class="card-title">Bal Sanskar</h4>
+                    <p>
+                        Weekly classes teaching children:
+                        <ul>
+                            <li>Shlokas</li>
+                            <li>Yog</li>
+                            <li>Moral Values</li>
+                            <li>Hindu Itihasa</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock content %}
