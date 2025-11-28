@@ -27,6 +27,41 @@
         margin-bottom: 30px;
     }
 </style>
+
+<style>
+    /* Make all images same height */
+.fixed-img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Same height for titles */
+.title-fixed {
+    font-size: 1.25rem;
+    font-weight: 600;
+    height: 50px;            /* Fixed height */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;   /* show max 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+/* Same height for descriptions */
+.desc-fixed {
+    height: 90px;            /* Fixed height */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;   /* show max 4 lines */
+    -webkit-box-orient: vertical;
+}
+
+/* Make all cards equal height */
+.equal-card {
+    height: 100%;
+}
+
+</style>
 {% endblock css %}
 
 {% block content  %}
@@ -43,11 +78,17 @@
 <!-- ABOUT -->
 <section id="about" class="py-5">
     <div class="container">
-        <h2 class="section-title">About Sanatan Seva Sangh</h2>
+        <h2 class="section-title">🔱 सनातन सेवा संघ के बारे में</h2>
         <p class="text-center px-5">
-            Sanatan Seva Sangh is a spiritual organization dedicated to the service of humanity
-            based on the values of Sanatan Hindu Dharma. Our mission is to protect Dharma,
-            serve society, uplift the needy, and spread the message of peace and compassion.
+            सनातन सेवा संघ एक आध्यात्मिक एवं सामाजिक संस्था है, जो सनातन हिन्दू धर्म के शाश्वत सिद्धांतों पर आधारित
+            मानव सेवा को समर्पित है।
+            हमारा उद्देश्य धर्म की रक्षा, समाज की सेवा, जरूरतमंदों का उत्थान और शांति व करुणा का संदेश फैलाना है।
+
+            संघ का विश्वास है कि—
+            “सेवा ही सच्चा धर्म है, और धर्म ही जीवन का आधार।”
+
+            हम विभिन्न सामाजिक, धार्मिक और मानवीय सेवाओं के माध्यम से समाज में सकारात्मक परिवर्तन लाने के लिए निरंतर
+            कार्यरत हैं।
         </p>
     </div>
 </section>
@@ -58,37 +99,19 @@
         <h2 class="section-title">Our Seva Activities</h2>
 
         <div class="row g-4">
+            {% for i in seva %}
             <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1603386329225-868f9d7f6a65" class="card-img-top" alt="">
+                <div class="card shadow-sm equal-card">
+                    <img src="{{ i.image.url }}" class="card-img-top fixed-img" alt="">
                     <div class="card-body">
-                        <h5 class="card-title">Gau Seva</h5>
-                        <p>Daily fodder, medical care & protection for cows in our Gaushala.</p>
+                        <h5 class="card-title title-fixed">{{ i.title }}</h5>
+                        <p class="desc-fixed">{{ i.description | safe }}</p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1557683304-673a23048d34" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Annadan</h5>
-                        <p>Food distribution to needy families, sadhus, and pilgrims.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Vriksharopan</h5>
-                        <p>Tree plantation drives for environmental protection.</p>
-                    </div>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
+
     </div>
 </section>
 

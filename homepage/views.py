@@ -1,9 +1,15 @@
 from django.shortcuts import render
 
+from sewa.models import SevaActivity
+
 
 # Create your views here.
 def homepage(request):
-    return render(request, 'index.html')
+    seva = SevaActivity.objects.all()
+    context = {
+        'seva': seva
+    }
+    return render(request, 'index.html', context)
 
 
 def about(request):
