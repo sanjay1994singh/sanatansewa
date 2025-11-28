@@ -2,12 +2,16 @@ from django.shortcuts import render
 
 from sewa.models import SevaActivity
 
+from gallery.models import Gallery
+
 
 # Create your views here.
 def homepage(request):
     seva = SevaActivity.objects.all()
+    gallery = Gallery.objects.all()
     context = {
-        'seva': seva
+        'seva': seva,
+        'gallery': gallery,
     }
     return render(request, 'index.html', context)
 

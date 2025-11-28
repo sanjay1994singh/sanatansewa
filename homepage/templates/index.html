@@ -60,7 +60,15 @@
 .equal-card {
     height: 100%;
 }
+</style>
 
+<style>
+    .gallery-img {
+        width: 100%;        /* fit column width */
+        height: 150px;      /* perfect fixed height */
+        object-fit: cover;  /* crop nicely */
+        border-radius: 8px;
+    }
 </style>
 {% endblock css %}
 
@@ -120,15 +128,13 @@
     <div class="container">
         <h2 class="section-title">Gallery</h2>
         <div class="row g-3">
-            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da"
-                                       class="img-fluid rounded"></div>
-            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1582653154701-4cc88a0505ac"
-                                       class="img-fluid rounded"></div>
-            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1559070121-1d1584e8d87d"
-                                       class="img-fluid rounded"></div>
-            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1603386329225-868f9d7f6a65"
-                                       class="img-fluid rounded"></div>
+            {% for i in gallery %}
+            <div class="col-md-3">
+                <img src="{{i.image.url}}" class="gallery-img">
+            </div>
+            {% endfor %}
         </div>
+
     </div>
 </section>
 
