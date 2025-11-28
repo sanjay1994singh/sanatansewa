@@ -21,7 +21,11 @@ def about(request):
 
 
 def sewa(request):
-    return render(request, 'sewa.html')
+    seva = SevaActivity.objects.all()
+    context = {
+        'seva': seva,
+    }
+    return render(request, 'sewa.html', context)
 
 
 def gallery(request):
