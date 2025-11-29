@@ -1,58 +1,58 @@
 {% extends 'base.html' %}
-{% block title %} About Us – Sanatan Seva Sangh {% endblock title %}
+{% block title %} हमारे बारे में – सनातन सेवा संघ {% endblock title %}
 
 {% block css %}
 <style>
-        .section-title {
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-        .mission-box, .vision-box, .founder-box {
-            border-left: 4px solid #f7b731;
-            background: #fffdf4;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .hero-about {
-            background: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da') center/cover no-repeat;
-            height: 50vh;
-            position: relative;
-        }
-        .hero-overlay {
-            background: rgba(0,0,0,0.6);
-            height: 100%;
-            width: 100%;
-            position: absolute;
-        }
-        .hero-content {
-            position: relative;
-            color: white;
-            text-align: center;
-            padding-top: 12%;
-        }
-    </style>
+    .section-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .mission-box, .vision-box, .founder-box {
+        border-left: 4px solid #f7b731;
+        background: #fffdf4;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .hero-about {
+        background: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da') center/cover no-repeat;
+        height: 50vh;
+        position: relative;
+    }
+    .hero-overlay {
+        background: rgba(0,0,0,0.6);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    .hero-content {
+        position: relative;
+        color: white;
+        text-align: center;
+        padding-top: 12%;
+    }
+</style>
 {% endblock css %}
 
-{% block content  %}
+{% block content %}
 <!-- HERO/BANNER -->
 <section class="hero-about mt-4">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1 class="display-5 fw-bold">About Sanatan Seva Sangh</h1>
-        <p class="lead">Serving Humanity with Dharma, Seva & Sanskar</p>
+        <h1 class="display-5 fw-bold">सनातन सेवा संघ</h1>
+        <p class="lead">धर्म, सेवा और संस्कार के मार्ग पर समाज उत्थान</p>
     </div>
 </section>
 
 <!-- ABOUT DESCRIPTION -->
 <section class="py-5">
     <div class="container">
-        <h2 class="section-title text-center">Who We Are</h2>
+        <h2 class="section-title text-center">हम कौन हैं</h2>
         <p class="text-center px-md-5">
-            Sanatan Seva Sangh is a non-profit spiritual organization dedicated to promoting
-            the eternal values of <strong>Sanatan Hindu Dharma</strong>.
-            We work to preserve Indian culture, uplift society through seva, and spread the teachings
-            of the Vedas, Puranas, and Hindu philosophy.
+            <strong>सनातन सेवा संघ</strong> एक आध्यात्मिक व सामाजिक संस्था है जो
+            <strong>सनातन हिंदू धर्म</strong> के मूल्यों के संरक्षण, प्रसार और समाज सेवा के लिए समर्पित है।
+            हमारा उद्देश्य भारतीय संस्कृति को पुनर्जीवित करना, सेवा के माध्यम से समाज का उत्थान करना तथा
+            वेद, पुराण और हिंदू दर्शन की ज्ञान परंपरा को जन-जन तक पहुँचाना है।
         </p>
     </div>
 </section>
@@ -61,13 +61,13 @@
 <section class="py-4 bg-light">
     <div class="container">
 
-        <h2 class="section-title text-center">Our Mission</h2>
+        <h2 class="section-title text-center">हमारा मिशन</h2>
 
         <div class="mission-box">
             <ul style="line-height: 1.9; font-size: 1.1rem;">
-                <li><strong>संरक्षण –</strong> Sanatan Dharma का संरक्षण व प्रसार</li>
+                <li><strong>संरक्षण –</strong> सनातन धर्म का संरक्षण एवं प्रसार</li>
                 <li><strong>सेवा –</strong> गौ सेवा, अन्नदान, मानव सेवा</li>
-                <li><strong>संस्कार –</strong> बाल संस्कार एवं नारी शक्ति कार्यक्रम</li>
+                <li><strong>संस्कार –</strong> बाल संस्कार, नारी शक्ति व समाज जागरण</li>
                 <li><strong>संस्कृति –</strong> भारतीय संस्कृति का पुनर्जागरण</li>
             </ul>
         </div>
@@ -79,11 +79,11 @@
 <section class="py-5">
     <div class="container">
 
-        <h2 class="section-title text-center">Our Vision</h2>
+        <h2 class="section-title text-center">हमारी दृष्टि</h2>
 
         <div class="vision-box text-center mx-auto" style="max-width: 700px;">
-            <p class="fs-5"><em>“Vasudhaiva Kutumbakam – The whole world is one family.”</em></p>
-            <p>We envision a society guided by dharma, compassion, and unity.</p>
+            <p class="fs-5"><em>“वसुधैव कुटुंबकम् – सम्पूर्ण विश्व एक परिवार है।”</em></p>
+            <p>हम एक ऐसे समाज की कल्पना करते हैं जो धर्म, करुणा और एकता के मार्ग पर आगे बढ़े।</p>
         </div>
 
     </div>
@@ -92,19 +92,15 @@
 <!-- FOUNDER MESSAGE -->
 <section class="py-5 bg-dark text-light">
     <div class="container">
-        <h2 class="section-title text-center text-white">Founder’s Message</h2>
+        <h2 class="section-title text-center text-white">संस्थापक का संदेश</h2>
 
         <div class="founder-box mx-auto text-center text-dark" style="max-width: 800px; background: #fff;">
             <p class="fs-5">
-                "Sanatan Dharma is not just a religion, it is a way of life.
-                Our purpose is to serve humanity with purity, devotion, and love."
+                "सनातन धर्म केवल एक धर्म नहीं, बल्कि जीवन जीने की विज्ञानपूर्ण शैली है।
+                हमारा उद्देश्य है — शुद्धता, भक्ति और प्रेम के साथ मानवता की सेवा करना।"
             </p>
         </div>
 
     </div>
 </section>
 {% endblock content %}
-
-
-
-
