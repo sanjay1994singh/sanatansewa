@@ -29,7 +29,11 @@ def sewa(request):
 
 
 def gallery(request):
-    return render(request, 'gallery.html')
+    gallery = Gallery.objects.all()
+    context = {
+        'gallery': gallery,
+    }
+    return render(request, 'gallery.html', context)
 
 
 def contact(request):
