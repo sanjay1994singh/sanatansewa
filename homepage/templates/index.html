@@ -57,6 +57,12 @@
 <style>
     /* Make all images same height */
 .fixed-img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.member-fixed-img {
     height: 500px;
     object-fit: cover;
     width: 100%;
@@ -158,7 +164,7 @@
             {% for i in member %}
             <div class="col-md-4">
                 <div class="card shadow-sm equal-card">
-                    <img src="{{ i.image.url }}" class="card-img-top fixed-img" alt="">
+                    <img src="{{ i.image.url }}" class="card-img-top member-fixed-img" alt="">
                     <div class="card-body">
                         <h5 class="card-title title-fixed">{{ i.description }}</h5>
                         <p class="desc-fixed">{{ i.name | safe }}</p>
