@@ -149,6 +149,28 @@
     </div>
 </section>
 
+<!-- SEVA ACTIVITIES -->
+<section id="seva" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Our Member</h2>
+
+        <div class="row g-4">
+            {% for i in member %}
+            <div class="col-md-4">
+                <div class="card shadow-sm equal-card">
+                    <img src="{{ i.image.url }}" class="card-img-top fixed-img" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title title-fixed">{{ i.name }}</h5>
+                        <p class="desc-fixed">{{ i.designation | safe }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
 <!-- GALLERY -->
 <section id="gallery" class="py-5">
     <div class="container">
@@ -177,8 +199,8 @@
                 <h5>Email:</h5>
                 <p>info@sanatanseva.org</p>
 
-                <h5>Phone:</h5>
-                <p>+91 98765 43210</p>
+<!--                <h5>Phone:</h5>-->
+<!--                <p>+91 98765 43210</p>-->
             </div>
 
             <div class="col-md-6">

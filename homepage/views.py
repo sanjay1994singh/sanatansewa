@@ -4,13 +4,17 @@ from sewa.models import SevaActivity
 
 from gallery.models import Gallery
 
+from member.models import Member
+
 
 # Create your views here.
 def homepage(request):
     seva = SevaActivity.objects.all()
+    member = Member.objects.all()
     gallery = Gallery.objects.all()
     context = {
         'seva': seva,
+        'member': member,
         'gallery': gallery,
     }
     return render(request, 'index.html', context)
